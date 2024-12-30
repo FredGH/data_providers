@@ -2,7 +2,7 @@ import sys
 sys.path.insert(0, ".")
 
 import unittest
-from  financial_data import dummy as d
+from  data_providers import dummy as d
 
 class TestDummy(unittest.TestCase):
     def setUp(self):
