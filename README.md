@@ -21,10 +21,10 @@ Provides access to external data providers data, such as yahoo financial data.
     * source ./venv/bin/activate
 * Install Requirements:
     * python3 -m pip install --upgrade pip
-    * pip3 install -r requirements.txt
 * Build Package:
     * python3 setup.py sdist bdist_wheel
     * pip3 install -e .
+    * [optional] pip install -Iv urllib3==1.26.15
 * Tag New Release & Push:
     * git tag 0.0.x -m "Release details"
     * git push origin 0.0.x

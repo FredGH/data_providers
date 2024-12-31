@@ -1,0 +1,11 @@
+from coinmarketcapapi import CoinMarketCapAPI
+
+class Cryptoccies():
+    @property
+    def get_list(self)->list:
+        return Cryptocurrencies().find_crypto_pairs()
+    
+if __name__ == "main":
+    c = Cryptoccies()
+    print(c.get_list())
+
