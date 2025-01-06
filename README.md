@@ -38,9 +38,8 @@ Provides access to external data providers data, such as yahoo financial data.
             * pip install git+https://{{ your access token }}@github.com/{{ username }}/{{ repository name}}.git@{{ tag/version }}#egg={{ package name }}
             * pip install git+https://github.com/{{ username }}/{{ package name }}.git@{{ tag/version }}
         * Example:
-            * pip install git+https://12345@github.com/my_user_name/data_providers.git@0.0.1#egg=data_providers
-            * pip install git+https://github.com/my_user_name/data_providers.git@0.0.1
-    
+            * pip install git+https://github.com/{{ username }}/data_providers.git@0.0.x
+            # * pip install git+https://12345@github.com/{{ username }}/data_providers.git@0.0.x#egg=data_providers    
 ### Executing program
 
 * N/A
