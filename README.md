@@ -17,11 +17,13 @@ Provides access to external data providers data, such as yahoo financial data.
 * Git clone the project
     * git clone https://github.com/FredGH/data_providers.git
 * Create the Python Env
+    * * rm -rf venv/
     * python3 -m venv venv
     * source ./venv/bin/activate
 * Install Requirements:
     * python3 -m pip install --upgrade pip
-* Build Package:
+* Build Package:    
+    * pip3 install -U pip setuptools
     * python3 setup.py sdist bdist_wheel
     * pip3 install -e .
     * [optional] pip install -Iv urllib3==1.26.15
