@@ -1,6 +1,7 @@
 
 import pandas as pd
-from ticker_data import TickerData
+from data_providers.stocks.ticker_data import TickerData
+
 
 class NewsData():
     def __init__(self, yfTickerData:TickerData=None):

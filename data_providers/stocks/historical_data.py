@@ -1,6 +1,7 @@
 
 import pandas as pd
-from data_providers.financial_data.ticker_data import TickerData
+from data_providers.stocks.ticker_data import TickerData
+
 
 class HistoricalData():
     def __init__(self, yfTickerData:TickerData=None):
