@@ -30,6 +30,7 @@ Provides access to external data providers data, such as yahoo financial data.
 * Tag New Release & Push:
     * git tag 0.0.x -m "Release details"
     * git push origin 0.0.x
+    * git push
 * Install Package:
     *  Go to Settings > Developer Settings > Personal access tokens (classic) > Generate new token with note e.g. "Upload package"
     *  Ensure you check the write:packages scope to grant the necessary permissions.
@@ -43,6 +44,7 @@ Provides access to external data providers data, such as yahoo financial data.
             * pip install git+https://github.com/{{ username }}/data_providers.git@0.0.x
             * [Optional] pip install git+https://12345@github.com/{{ username }}/data_providers.git@0.0.x#egg=data_providers    
     * [Optional] Deleting tags:
+        * List tags: git tag -l
         * Delete origin: git push origin :refs/tags/{{tagname}} (e.g. 0.01)
         * Delete locally: git tag --delete {{tagname}} (e.g. 0.01)
 ### Executing program
