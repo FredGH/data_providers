@@ -58,9 +58,7 @@ freddy.marechal@gmail.com
 ## Version History
 
 * 0.0.1
-    * First version only containing stubs
-* 0.0.2
-    * Initial Release
+    * TBC
 
 ## License
 
