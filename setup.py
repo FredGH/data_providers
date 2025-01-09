@@ -5,7 +5,7 @@ with open('requirements.txt') as f:
 
 setup(
     name="data_providers",
-    version="0.0.5",
+    version="0.0.6",
     include_package_data=True,
     python_requires='>=3.13',
     packages=find_packages(),
