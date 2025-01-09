@@ -37,12 +37,17 @@ Provides access to external data providers data, such as yahoo financial data.
     * Get your Github user name, e.g. "my_user_name"
     * Install the private package using the following:
         * Template:
-            * pip install git+https://{{ your access token }}@github.com/{{ username }}/{{ repository name}}.git@{{ tag/version }}#egg={{ package name }}
             * pip install git+https://github.com/{{ username }}/{{ package name }}.git@{{ tag/version }}
+            * [Optional] pip install git+https://{{ your access token }}@github.com/{{ username }}/{{ repository name}}.git@{{ tag/version }}#egg={{ package name }}
         * Example:
             * pip install git+https://github.com/{{ username }}/data_providers.git@0.0.x
-            # * pip install git+https://12345@github.com/{{ username }}/data_providers.git@0.0.x#egg=data_providers    
+            * [Optional] pip install git+https://12345@github.com/{{ username }}/data_providers.git@0.0.x#egg=data_providers    
+    * [Optional] Deleting tags:
+        * Delete origin: git push origin :refs/tags/{{tagname}} (e.g. 0.01)
+        * Delete locally: git tag --delete {{tagname}} (e.g. 0.01)
 ### Executing program
+
+
 
 * N/A
 
