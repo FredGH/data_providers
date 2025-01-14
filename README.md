@@ -17,7 +17,8 @@ Provides access to external data providers data, such as yahoo financial data.
 * Git clone the project
     * git clone https://github.com/FredGH/data_providers.git
 * Create the Python Env
-    * * rm -rf venv/
+    * rm -rf venv/
+    * In Visual Studio Vode -> Ctrl+Shift+P -> select python 3.11.x
     * python3 -m venv venv
     * source ./venv/bin/activate
 * Install Requirements:
