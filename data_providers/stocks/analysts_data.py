@@ -8,7 +8,7 @@ class AnalystsData():
         self.yfTickerData = yfTickerData
 
     @property
-    def get_ranalyst_price_targets(self)->pd.DataFrame:
+    def get_analyst_price_targets(self)->pd.DataFrame:
         return self.yfTickerData.analyst_price_targets
     
     @property

@@ -21,6 +21,7 @@ Provides access to external data providers data, such as yahoo financial data.
     * In Visual Studio Vode -> Ctrl+Shift+P -> Select Interpreter ->  Python 3.11.x
     * python3.11 -m venv venv
     * source ./venv/bin/activate
+    * In Visual Studio Vode -> Ctrl+Shift+P -> Select Interpreter ->  (venv) Python 3.11.x
     * [optional] check Python3 version -> python3 -> should show Python 3.11.x
 * Install Requirements:
     * python3.11 -m pip install --upgrade pip
