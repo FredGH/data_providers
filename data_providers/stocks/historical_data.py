@@ -8,7 +8,7 @@ class HistoricalData():
         self.yfTickerData = yfTickerData
 
     def get_historical_data(self, period:str="1mo")->pd.DataFrame:
-        return self.yfTickerData.history(period="1mo")
+        return self.yfTickerData.history(period=period)
     
     def get_historical_meta_data(self, period)->pd.DataFrame:
         _ = self.yfTickerData.get_historical_data(self, period)
