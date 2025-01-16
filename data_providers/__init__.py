@@ -7,7 +7,7 @@ from data_providers.stocks.historical_data import HistoricalData
 from data_providers.stocks.holders_data import HoldersData
 from data_providers.stocks.news_data import NewsData
 from data_providers.stocks.options_data import OptionsData
-from data_providers.stocks.recommendation_data import RecommendationsData
+from data_providers.stocks.recommendations_data import RecommendationsData
 from data_providers.stocks.sustainability_data import SustainabilityData
 from data_providers.stocks.ticker_data import TickerData
 

@@ -8,19 +8,19 @@ class ActionData():
         self.yfTickerData = yfTickerData
 
     @property
-    def get_actions(self)->pd.DataFrame:
+    def get_actions(self)->pd.Series:
         return self.yfTickerData.actions
     
     @property
-    def get_dividends(self)->pd.DataFrame:
+    def get_dividends(self)->pd.Series:
         return self.yfTickerData.dividends
     
     @property
-    def get_splits(self)->pd.DataFrame:
+    def get_splits(self)->pd.Series:
         return self.yfTickerData.splits
     
     @property
-    def get_capital_gains(self)->pd.DataFrame:
+    def get_capital_gains(self)->pd.Series:
         return self.yfTickerData.capital_gains
     
     @property
