@@ -50,9 +50,10 @@ Provides access to external data providers data, such as yahoo financial data.
         * List tags: git tag -l
         * Delete origin: git push origin :refs/tags/{{tagname}} (e.g. 0.01)
         * Delete locally: git tag --delete {{tagname}} (e.g. 0.01)
+
+* Code cleanup & Standardisation
+    * ruff check . &isort . &black .
 ### Executing program
-
-
 
 * N/A
 

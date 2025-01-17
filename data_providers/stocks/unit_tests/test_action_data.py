@@ -1,8 +1,10 @@
-import pandas as pd
 import unittest
 from unittest.mock import MagicMock
-from data_providers.stocks.ticker_data import TickerData
-from data_providers.stocks.action_data import ActionData 
+
+import pandas as pd
+
+from data_providers.stocks.action_data import ActionData
+
 
 class TestActionData(unittest.TestCase):
 
@@ -69,14 +71,18 @@ class TestActionData(unittest.TestCase):
 
     def test_get_shares_full(self):
         # Positive test case
-        self.mock_ticker_data.get_shares_full.return_value = pd.DataFrame({'shares': [100, 200]})
+        self.mock_ticker_data.get_shares_full.return_value = pd.DataFrame(
+            {"shares": [100, 200]}
+        )
         shares_full = self.action_data.get_get_shares_full(start="2022-01-01")
         self.assertTrue(isinstance(shares_full, pd.DataFrame))
-        self.assertEqual(shares_full['shares'].tolist(), [100, 200])
+        self.assertEqual(shares_full["shares"].tolist(), [100, 200])
 
     def test_get_shares_full_empty(self):
         # Negative test case
-        self.mock_ticker_data.get_shares_full.return_value = pd.DataFrame(columns=['shares'])
+        self.mock_ticker_data.get_shares_full.return_value = pd.DataFrame(
+            columns=["shares"]
+        )
         shares_full = self.action_data.get_get_shares_full(start="2022-01-01")
         self.assertTrue(isinstance(shares_full, pd.DataFrame))
         self.assertTrue(shares_full.empty)
@@ -86,5 +92,6 @@ class TestActionData(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.action_data.get_get_shares_full(start=None, end=None)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

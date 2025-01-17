@@ -1,14 +1,14 @@
-
 import pandas as pd
+
 from data_providers.stocks.ticker_data import TickerData
 
 
 # This class likely represents a data structure or object for storing historical data.
-class HistoricalData():
-    def __init__(self, yfTickerData:TickerData=None):
+class HistoricalData:
+    def __init__(self, yfTickerData: TickerData = None):
         """
         The function initializes an object with optional Yahoo Finance ticker data.
-        
+
         :param yfTickerData: The `__init__` method you provided is a constructor for a class, and it
         takes an optional parameter `yfTickerData` of type `TickerData`. This parameter is used to
         initialize the `yfTickerData` attribute of the class instance
@@ -16,11 +16,11 @@ class HistoricalData():
         """
         self.yfTickerData = yfTickerData
 
-    def get_historical_data(self, period:str="1mo")->pd.DataFrame:
+    def get_historical_data(self, period: str = "1mo") -> pd.DataFrame:
         """
         The function `get_historical_data` retrieves historical stock data for a specified period using
         the Yahoo Finance API.
-        
+
         :param period: The `get_historical_data` function retrieves historical market data for a given
         period. The `period` parameter specifies the time period for which you want to retrieve
         historical data. The default value for the `period` parameter is set to "1mo", which stands for
@@ -31,11 +31,11 @@ class HistoricalData():
         the `yfTickerData` object with the specified period parameter.
         """
         return self.yfTickerData.history(period=period)
-    
-    def get_historical_meta_data(self, period)->pd.DataFrame:
+
+    def get_historical_meta_data(self, period) -> pd.DataFrame:
         """
         This function retrieves historical meta data for a given period using Yahoo Finance API.
-        
+
         :param period: The `period` parameter in the `get_historical_meta_data` method likely refers to
         the time period for which historical data is being requested. This parameter could specify the
         duration or range of time for which historical data should be retrieved, such as "1d" for one
@@ -47,4 +47,3 @@ class HistoricalData():
         _ = self.yfTickerData.get_historical_data(self, period)
         # show meta information about the history (requires history() to be called first)
         return super.yfTickerData.history_metadata
-    
