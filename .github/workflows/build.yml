@@ -22,5 +22,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install --upgrade --force-reinstall -r requirements.txt; fi
-          coverage run -m unittest discover data_providers
-          coverage report -m data_providers
+          cd data_providers
+          coverage run -m unittest discover 
+          coverage report -m 
