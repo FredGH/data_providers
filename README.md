@@ -57,7 +57,7 @@ Provides access to external data providers data, such as yahoo financial data.
 * Run unit tests
     * run in /dataproviders 
         * coverage run -m unittest discover
-        * coverage report -m or coverage hml
+        * coverage report -m (or coverage hml)
 
 ### Executing program
 

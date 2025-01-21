@@ -13,7 +13,7 @@ class TestDummy(unittest.TestCase):
 
     def test_get_data_successful(self):
         dummy = d.Dummy()
-        actual = dummy.get_data()
+        actual = dummy.get_data
         expected = [1, 2, 3]
         self.assertEqual(
             expected, actual, "The expected output is in NOT line with the actual"

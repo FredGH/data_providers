@@ -38,18 +38,17 @@ class FinancialData:
         """
         return self.yfTickerData.sec_filings
 
-    @property
-    def get_get_shares_full(
+    def get_shares_full(
         self, start: str = "2022-01-01", end: str = None
     ) -> pd.DataFrame:
         """
         This function retrieves full share data for a specified date range using the Yahoo Finance API.
 
-        :param start: The `start` parameter in the `get_get_shares_full` method is a string that
+        :param start: The `start` parameter in the `get_shares_full` method is a string that
         represents the start date for retrieving data. In this case, the default value for `start` is
         set to "2022-01-01", defaults to 2022-01-01
         :type start: str (optional)
-        :param end: The `end` parameter in the `get_get_shares_full` function is a string that
+        :param end: The `end` parameter in the `get_shares_full` function is a string that
         represents the end date for retrieving data. If no `end` date is provided when calling the
         function, it defaults to `None`, indicating that data will be retrieved up to the most recent
         available date

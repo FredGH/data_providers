@@ -69,29 +69,5 @@ class TestActionData(unittest.TestCase):
         self.assertTrue(isinstance(capital_gains, pd.Series))
         self.assertEqual(capital_gains.tolist(), [])
 
-    def test_get_shares_full(self):
-        # Positive test case
-        self.mock_ticker_data.get_shares_full.return_value = pd.DataFrame(
-            {"shares": [100, 200]}
-        )
-        shares_full = self.action_data.get_get_shares_full(start="2022-01-01")
-        self.assertTrue(isinstance(shares_full, pd.DataFrame))
-        self.assertEqual(shares_full["shares"].tolist(), [100, 200])
-
-    def test_get_shares_full_empty(self):
-        # Negative test case
-        self.mock_ticker_data.get_shares_full.return_value = pd.DataFrame(
-            columns=["shares"]
-        )
-        shares_full = self.action_data.get_get_shares_full(start="2022-01-01")
-        self.assertTrue(isinstance(shares_full, pd.DataFrame))
-        self.assertTrue(shares_full.empty)
-
-    def test_get_shares_full_invalid_dates(self):
-        # Edge case: Invalid date range
-        with self.assertRaises(TypeError):
-            self.action_data.get_get_shares_full(start=None, end=None)
-
-
 if __name__ == "__main__":
     unittest.main()

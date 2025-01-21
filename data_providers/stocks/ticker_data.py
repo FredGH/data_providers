@@ -1,6 +1,5 @@
 import yfinance as yf
 
-
 class TickerData:
     def __init__(self, name: str = ""):
         self.nme = name
