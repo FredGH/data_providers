@@ -16,3 +16,5 @@ if __name__ == "__main__":
 
     dat = yf.Ticker("MSFT")
     print(dat.analyst_price_targets)
+    print(dat.history(period='2d'))
+    print(dat.history(period='2d').columns)

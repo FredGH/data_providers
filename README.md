@@ -1,6 +1,4 @@
-# Project Title
-
-Data Providers
+# Data Providers
 
 ## Description
 
