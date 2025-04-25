@@ -24,4 +24,6 @@ class InfoData:
         :return: The `get_info` method is returning the information stored in the `info` attribute of
         the `yfTickerData` object as a pandas DataFrame.
         """
-        return self.yfTickerData.info
+        if hasattr(self.yfTickerData, 'info'):
+            return self.yfTickerData.info
+        return None

@@ -36,6 +36,14 @@ class TestInfoData(unittest.TestCase):
         info_data_none = InfoData()
         self.assertIsNone(info_data_none.yfTickerData)
 
+    def test_info_data_ticket_invalid(self):
+        # Test initialization with None
+        invalid_ticker = "INVALID"
+        ticker_data = TickerData(name=invalid_ticker)
+        info_data = InfoData(yfTickerData = ticker_data)
+        res = info_data.get_info
+        self.assertIsNone(res)
+
     def test_info_data_initialization_with_ticker_data(self):
         # Test initialization with a valid TickerData
         info_data_valid = InfoData(yfTickerData=self.mock_ticker_data)
@@ -45,9 +53,7 @@ class TestInfoData(unittest.TestCase):
         # Edge case: Empty DataFrame
         empty_info = pd.DataFrame()
         self.mock_ticker_data.info = empty_info
-
         result = self.info_data.get_info
-
         # Check if the result is an empty DataFrame
         pd.testing.assert_frame_equal(result, empty_info)
 
