@@ -31,8 +31,7 @@ class AccountingData:
     def get_cashflow(self) -> pd.DataFrame:
         """
         This function returns the cashflow data from the Yahoo Finance ticker data stored in the object.
-        :return: A pandas DataFrame containing the cashflow data from the `yfTickerData` attribute of
-        the object.
+        :return: A pandas DataFrame containing the cashflow data from the yfTickerData attribute.
         """
         return self.yfTickerData.cashflow
 

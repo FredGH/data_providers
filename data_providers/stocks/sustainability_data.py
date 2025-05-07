@@ -9,4 +9,9 @@ class SustainabilityData:
 
     @property
     def get_sustainability(self) -> pd.DataFrame:
+        """
+        This function returns the sustainability data of a given yfTickerData object as a pandas
+        DataFrame.
+        :return: A pandas DataFrame containing sustainability data from the yfTickerData attribute.
+        """
         return self.yfTickerData.sustainability

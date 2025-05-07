@@ -1,5 +1,6 @@
 import yfinance as yf
 
+# This class likely represents data related to stock tickers.
 class TickerData:
     def __init__(self, name: str = ""):
         self.nme = name
@@ -7,11 +8,9 @@ class TickerData:
 
     @property
     def get_ticker(self) -> yf.Ticker:
+        """
+        This function returns the Yahoo Finance Ticker object associated with the class instance.
+        :return: An instance of the `yf.Ticker` class is being returned.
+        # This class likely contains data and methods related to sustainability metrics or practices.
+        """
         return self.yfTicker
-
-
-# import data_providers.stocks.news_data as nd
-# td = TickerData(name="MSFT")
-# ticker = td.get_ticker
-# ad = nd.NewsData(ticker)
-# res = ad.get_news

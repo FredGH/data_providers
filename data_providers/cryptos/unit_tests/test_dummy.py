@@ -4,7 +4,7 @@ sys.path.insert(0, ".")
 
 import unittest
 
-from data_providers import dummy as d
+from data_providers.stocks.unit_tests import manual_run as d
 
 
 class TestDummy(unittest.TestCase):
