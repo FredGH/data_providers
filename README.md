@@ -24,7 +24,7 @@ Provides access to external data providers data, such as yahoo financial data.
 * Install Requirements:
     * python3.11 -m pip install --upgrade pip
 * Build Package:    
-    * pip3.11 install -U pip setuptools
+    * pip3.11 install -U pip setuptools==75.3.0
     * python3.11 setup.py sdist bdist_wheel
     * pip3.11 install -e .
     * [optional] pip install -Iv urllib3==1.26.15
@@ -47,7 +47,9 @@ Provides access to external data providers data, such as yahoo financial data.
     * [Optional] Deleting tags:
         * List tags: git tag -l
         * Delete origin: git push origin :refs/tags/{{tagname}} (e.g. 0.01)
+        * Delete origin (all tags): git push origin --delete $(git tag -l)
         * Delete locally: git tag --delete {{tagname}} (e.g. 0.01)
+        * Delete locally (all tags): git tag --delete $(git tag -l)
 
 * Code cleanup & Standardisation
     * ruff check . &isort . &black .
